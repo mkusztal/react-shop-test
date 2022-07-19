@@ -1,20 +1,23 @@
 import { useSelector } from 'react-redux';
-import { getCategories } from '../../../redux/categoryReducer';
+//import { getCategories } from '../../../redux/categoryReducer';
 import { getProducts } from '../../../redux/productReducer';
 
+import Product from '../../features/Product/Product';
+import styles from './Products.module.scss';
 const Products = () => {
-  const categories = useSelector(getCategories);
   const products = useSelector(getProducts);
 
   return (
     <div>
-      <h1></h1>
-      <div className={styles.menu}>
+      <div>
+        <h1>Category name</h1>
+      </div>
+      <div className={styles.box}>
         <ul>
-          {products.map((categories) => (
-            <li key={categories}>
-              <a className={styles.text}>{categories}</a>
-            </li>
+          {products.map((product) => (
+            <div className={styles.card}>
+              <Product {...product} />
+            </div>
           ))}
         </ul>
       </div>

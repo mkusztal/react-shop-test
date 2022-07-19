@@ -1,7 +1,6 @@
 import { useSelector } from 'react-redux';
 import { getCategories } from '../../../redux/categoryReducer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
 import {
   faShoppingBag,
   faDollarSign,
