@@ -1,0 +1,39 @@
+@import '../../../styles/settings.scss';
+
+.box {
+  padding: 20px;
+  position: relative;
+  .card {
+    .image {
+      height: 300px;
+      width: 300px;
+      object-fit: cover;
+    }
+  }
+
+  .basket_icon {
+    position: absolute;
+    bottom: 20%;
+    right: 15%;
+    display: none;
+  }
+
+  .basket {
+    color: $white-color;
+    background: {
+      color: $active-green-color;
+    }
+    border-radius: 70%;
+    border-width: 30px;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+  }
+
+  &:hover {
+    border-style: groove;
+    .basket_icon {
+      display: block;
+    }
+  }
+}

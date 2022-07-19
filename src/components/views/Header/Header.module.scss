@@ -39,7 +39,7 @@ header {
               bottom: -4px;
               left: 0;
               width: 100%;
-              border-bottom: 4px solid $active-green-text;
+              border-bottom: 4px solid $active-green-color;
             }
           }
         }
@@ -48,7 +48,7 @@ header {
   }
 
   .logo {
-    color: $active-green-text;
+    color: $active-green-color;
     display: flex;
     justify-content: center;
   }

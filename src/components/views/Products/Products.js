@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 //import { getCategories } from '../../../redux/categoryReducer';
 import { getProducts } from '../../../redux/productReducer';
 
-import Product from '../../features/Product/Product';
+import Product from '../../features/Product/ProductBox';
 import styles from './Products.module.scss';
 const Products = () => {
   const products = useSelector(getProducts);
