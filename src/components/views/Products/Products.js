@@ -13,13 +13,11 @@ const Products = () => {
         <h1>Category name</h1>
       </div>
       <div className={styles.box}>
-        <ul>
-          {products.map((product) => (
-            <div className={styles.card}>
-              <Product {...product} />
-            </div>
-          ))}
-        </ul>
+        {products.map((product) => (
+          <div className={styles.card}>
+            <Product {...product} />
+          </div>
+        ))}
       </div>
     </div>
   );

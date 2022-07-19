@@ -1,0 +1,7 @@
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  .card {
+    flex: 1 0 25%;
+  }
+}
