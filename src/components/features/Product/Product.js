@@ -1,4 +1,6 @@
 import styles from './Product.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 const Product = ({ image, name, price }) => {
   return (
     <div className={styles.box}>
@@ -11,6 +13,7 @@ const Product = ({ image, name, price }) => {
           <b>${price}.00</b>
         </p>
       </div>
+      <FontAwesomeIcon className={styles.basket} icon={faShoppingBasket} />
     </div>
   );
 };
