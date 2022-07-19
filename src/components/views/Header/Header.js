@@ -11,44 +11,30 @@ import styles from './Header.module.scss';
 
 const Header = () => {
   const categories = useSelector(getCategories);
-  // [activeCategory, setActiveCategory] = useState(null);
-  // [activeFade, setActiveFade] = useState(true);
 
-  // const handleCategoryChange = (newCategory) => {
-  //   // this.setState({
-  //   //   activeFade: true,
-  //   // });
-
-  //   setTimeout(() => {
-  //     this.setState({
-  //       activeCategory: newCategory,
-  //     });
-  //   }, 250);
-
-  //   if (activeFade === false) {
-  //     setTimeout(
-  //       function () {
-  //         setActiveFade = false;
-  //       }.bind(this),
-  //       250
-  //     );
-  //   }
-  //};
   return (
-    <header className="header">
-      <div className={styles.menu}>
-        <ul>
-          {categories.map((categories) => (
-            <li key={categories}>
-              <a className={styles.text}>{categories}</a>
-            </li>
-          ))}
-        </ul>
+    <header className={styles.header}>
+      <div className={styles.item}>
+        <div className={styles.menu}>
+          <ul>
+            {categories.map((categories) => (
+              <li key={categories}>
+                <a className={styles.text}>{categories}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-      <FontAwesomeIcon className={styles.icon} icon={faShoppingBag} />
-      <div className={styles.cart}>
-        <FontAwesomeIcon className={styles.dollar} icon={faDollarSign} />
-        <FontAwesomeIcon className={styles.basket} icon={faShoppingBasket} />
+      <div className={styles.item}>
+        <div className={styles.logo}>
+          <FontAwesomeIcon className={styles.icon} icon={faShoppingBag} />
+        </div>
+      </div>
+      <div className={styles.item}>
+        <div className={styles.cart}>
+          <FontAwesomeIcon className={styles.dollar} icon={faDollarSign} />
+          <FontAwesomeIcon className={styles.basket} icon={faShoppingBasket} />
+        </div>
       </div>
     </header>
   );
