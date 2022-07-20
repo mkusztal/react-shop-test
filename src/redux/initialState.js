@@ -43,20 +43,6 @@ const initialState = {
       price: 50,
       image: './images/women/women-6.jpg',
     },
-    {
-      id: '7',
-      name: 'Apollo Running Short',
-      category: 'Women',
-      price: 50,
-      image: './images/women/women-7.jpg',
-    },
-    {
-      id: '8',
-      name: 'Apollo Running Short',
-      category: 'Women',
-      price: 50,
-      image: './images/women/women-8.jpg',
-    },
   ],
 };
 

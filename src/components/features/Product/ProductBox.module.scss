@@ -11,6 +11,10 @@
     }
   }
 
+  .text {
+    justify-content: center;
+  }
+
   .basket_icon {
     position: absolute;
     bottom: 20%;
@@ -23,7 +27,7 @@
     background: {
       color: $active-green-color;
     }
-    border-radius: 70%;
+    border-radius: 50%;
     border-width: 30px;
     width: 30px;
     height: 30px;

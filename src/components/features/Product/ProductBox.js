@@ -7,7 +7,7 @@ const Product = ({ image, name, price }) => {
       <div className={styles.card}>
         <img className={styles.image} src={image} alt="product" />
       </div>
-      <div>
+      <div className={styles.text}>
         <p>{name}</p>
         <p>
           <b>${price}.00</b>

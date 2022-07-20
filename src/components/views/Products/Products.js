@@ -8,7 +8,7 @@ const Products = () => {
   const products = useSelector(getProducts);
 
   return (
-    <div>
+    <div className={styles.root}>
       <div>
         <h1>Category name</h1>
       </div>

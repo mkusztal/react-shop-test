@@ -1,7 +1,12 @@
-.box {
-  display: flex;
-  flex-wrap: wrap;
-  .card {
-    flex: 1 0 25%;
+.root {
+  margin-top: 50px;
+
+  .box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 70px;
+    .card {
+      flex: 1 0 33%;
+    }
   }
 }
