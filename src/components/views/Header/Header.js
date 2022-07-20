@@ -5,6 +5,9 @@ import {
   faShoppingBag,
   faDollarSign,
   faShoppingBasket,
+  faArrowDown,
+  faEuroSign,
+  faYenSign,
 } from '@fortawesome/free-solid-svg-icons';
 import styles from './Header.module.scss';
 
@@ -16,9 +19,11 @@ const Header = () => {
       <div className={styles.item}>
         <div className={styles.menu}>
           <ul>
-            {categories.map((categories) => (
+            {categories.map((category) => (
               <li key={categories}>
-                <a className={styles.text}>{categories}</a>
+                <a href="#" className={styles.category}>
+                  {category}
+                </a>
               </li>
             ))}
           </ul>
@@ -31,7 +36,36 @@ const Header = () => {
       </div>
       <div className={styles.item}>
         <div className={styles.cart}>
-          <FontAwesomeIcon className={styles.dollar} icon={faDollarSign} />
+          <div className={styles.dropdown}>
+            <button className={styles.dropbtn}>
+              <FontAwesomeIcon className={styles.dollar} icon={faDollarSign} />
+              <FontAwesomeIcon
+                className={styles.arrow_down}
+                icon={faArrowDown}
+              />
+            </button>
+
+            <div className={styles.dropdown_content}>
+              <a href="#">
+                <FontAwesomeIcon
+                  className={styles.currency}
+                  icon={faDollarSign}
+                />
+                USD
+              </a>
+              <a href="#">
+                <FontAwesomeIcon
+                  className={styles.currency}
+                  icon={faEuroSign}
+                />
+                EUR
+              </a>
+              <a href="#">
+                <FontAwesomeIcon className={styles.currency} icon={faYenSign} />
+                YPY
+              </a>
+            </div>
+          </div>
           <FontAwesomeIcon className={styles.basket} icon={faShoppingBasket} />
         </div>
       </div>
