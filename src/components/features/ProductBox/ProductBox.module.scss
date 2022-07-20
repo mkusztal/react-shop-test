@@ -4,6 +4,7 @@
   padding: 20px;
   position: relative;
   width: fit-content;
+
   .card {
     .image {
       height: 300px;
@@ -14,6 +15,7 @@
 
   .text {
     justify-content: center;
+    color: $black-color;
   }
 
   .basket_icon {

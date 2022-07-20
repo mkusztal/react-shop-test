@@ -13,8 +13,8 @@ const Products = () => {
         <h1>Category name</h1>
       </div>
       <div className={styles.box}>
-        {products.map((product) => (
-          <div className={styles.card}>
+        {products.map((product, index) => (
+          <div className={styles.card} key={index}>
             <Product {...product} />
           </div>
         ))}

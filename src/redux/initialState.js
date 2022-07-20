@@ -1,5 +1,6 @@
 const initialState = {
   categories: ['Women', 'Men', 'Kids'],
+
   products: [
     {
       id: '1',

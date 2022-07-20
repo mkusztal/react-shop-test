@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
 import { getCategories } from '../../../redux/categoryReducer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -19,8 +20,8 @@ const Header = () => {
       <div className={styles.item}>
         <div className={styles.menu}>
           <ul>
-            {categories.map((category) => (
-              <li key={categories}>
+            {categories.map((category, index) => (
+              <li key={index}>
                 <a href="#" className={styles.category}>
                   {category}
                 </a>
@@ -41,23 +42,22 @@ const Header = () => {
               <FontAwesomeIcon icon={faDollarSign} />
             </button>
             <FontAwesomeIcon className={styles.arrow_down} icon={faArrowDown} />
-
             <div className={styles.dropdown_content}>
-              <a href="#">
+              <a href="#" value="1">
                 <FontAwesomeIcon
                   className={styles.currency}
                   icon={faDollarSign}
                 />
                 USD
               </a>
-              <a href="#">
+              <a href="#" value="2">
                 <FontAwesomeIcon
                   className={styles.currency}
                   icon={faEuroSign}
                 />
                 EUR
               </a>
-              <a href="#">
+              <a href="#" value="3">
                 <FontAwesomeIcon className={styles.currency} icon={faYenSign} />
                 YPY
               </a>
