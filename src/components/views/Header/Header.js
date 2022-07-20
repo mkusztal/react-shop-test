@@ -38,12 +38,9 @@ const Header = () => {
         <div className={styles.cart}>
           <div className={styles.dropdown}>
             <button className={styles.dropbtn}>
-              <FontAwesomeIcon className={styles.dollar} icon={faDollarSign} />
-              <FontAwesomeIcon
-                className={styles.arrow_down}
-                icon={faArrowDown}
-              />
+              <FontAwesomeIcon icon={faDollarSign} />
             </button>
+            <FontAwesomeIcon className={styles.arrow_down} icon={faArrowDown} />
 
             <div className={styles.dropdown_content}>
               <a href="#">

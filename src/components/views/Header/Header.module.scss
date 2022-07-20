@@ -66,10 +66,7 @@ header {
     display: flex;
     justify-content: center;
     font-style: normal;
-    .arrow_down {
-      font-size: 14px;
-      padding-left: 7px;
-    }
+
     .dropdown {
       position: relative;
       display: inline-block;
@@ -80,6 +77,11 @@ header {
         font-size: 24px;
         border: none;
         cursor: pointer;
+      }
+
+      .arrow_down {
+        font-size: 14px;
+        padding-left: 7px;
       }
 
       .dropdown_content {
@@ -103,6 +105,14 @@ header {
         }
       }
     }
+
+    .dropdown:hover {
+      .arrow_down {
+        transform: rotate(180deg);
+        padding: 0 10px 0 0;
+      }
+    }
+
     .dropdown_content a:hover {
       background-color: #f1f1f1;
     }
