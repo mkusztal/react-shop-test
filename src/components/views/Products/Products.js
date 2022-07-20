@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { getProducts } from '../../../redux/productReducer';
 
-import Product from '../../features/Product/ProductBox';
+import Product from '../../features/ProductBox/ProductBox';
 import styles from './Products.module.scss';
 
 const Products = () => {
@@ -9,7 +9,7 @@ const Products = () => {
 
   return (
     <div className={styles.root}>
-      <div>
+      <div className={styles.category_name}>
         <h1>Category name</h1>
       </div>
       <div className={styles.box}>
