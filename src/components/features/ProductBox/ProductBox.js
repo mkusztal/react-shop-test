@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 const Product = ({ image, name, price, id }) => {
   return (
-    <Link to={'/product/' + id}>
-      <div className={styles.box}>
+    <div className={styles.box}>
+      <Link to={'/product/' + id}>
         <div className={styles.card}>
           <img className={styles.image} src={image} alt="product" />
         </div>
@@ -16,11 +16,11 @@ const Product = ({ image, name, price, id }) => {
             <b>${price}.00</b>
           </p>
         </div>
-        <div className={styles.basket_icon}>
-          <FontAwesomeIcon className={styles.basket} icon={faShoppingBasket} />
-        </div>
+      </Link>
+      <div className={styles.basket_icon}>
+        <FontAwesomeIcon className={styles.basket} icon={faShoppingBasket} />
       </div>
-    </Link>
+    </div>
   );
 };
 
