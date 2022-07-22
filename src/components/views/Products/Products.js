@@ -1,26 +1,26 @@
-import { useSelector } from 'react-redux';
-import { getProducts } from '../../../redux/productReducer';
-
-import Product from '../../features/ProductBox/ProductBox';
+import React from 'react';
+import ProductBox from '../../features/ProductBox/ProductBox';
 import styles from './Products.module.scss';
+import db from '../../../db.json'
 
-const Products = () => {
-  const products = useSelector(getProducts);
+const productData = db.products;
 
-  return (
-    <div className={styles.root}>
-      <div className={styles.category_name}>
-        <h1>Category name</h1>
+class Products extends React.Component {
+  render(){
+    return (
+      <div className={styles.root}>
+        <div className={styles.category_name}>
+          <h1>Category name</h1>
+        </div>
+        <div className={styles.box}>
+          {productData?.map((product, index) => (
+            <div className={styles.card} key={index}>
+              <ProductBox {...product} />
+            </div>
+          ))}
+        </div>
       </div>
-      <div className={styles.box}>
-        {products.map((product, index) => (
-          <div className={styles.card} key={index}>
-            <Product {...product} />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+    );
+  }
 };
-
 export default Products;

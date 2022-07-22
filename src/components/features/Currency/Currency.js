@@ -1,35 +1,27 @@
-import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faDollarSign,
-  faEuroSign,
-  faYenSign,
-} from '@fortawesome/free-solid-svg-icons';
-import styles from './Currency.module.scss';
+import React from 'react';
+//import styles from './Currency.module.scss';
 
-const Currency = () => {
-  const [value, setValue] = useState(<FontAwesomeIcon icon={faDollarSign} />);
+class Currency extends React.Component{
 
-  const handleChange = (event) => {
-    setValue(event.target.value);
+  constructor(props){
+    super(props);
+    this.state = {value : '$'};
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event)  {
+    this.setState({value: event.target.value});
+  }
+
+  render(){
+    return (
+      <select value={this.state.value} onChange={this.handleChange}>
+        <option value="dollar">$ USD</option>
+        <option value="euro">€ EUR</option>
+        <option value="yen">¥ YPY</option>
+      </select>
+    );
   };
-
-  return (
-    <select value={value} onChange={handleChange}>
-      <option value="dollar">
-        <FontAwesomeIcon className={styles.currency} icon={faDollarSign} />
-        USD
-      </option>
-      <option value="euro">
-        <FontAwesomeIcon className={styles.currency} icon={faEuroSign} />
-        EUR
-      </option>
-      <option value="yen">
-        <FontAwesomeIcon className={styles.currency} icon={faYenSign} />
-        YPY
-      </option>
-    </select>
-  );
-};
-
+}
 export default Currency;
