@@ -3,23 +3,21 @@ import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import db from '../../../db.json'
-
 
 class ProductBox extends React.Component {
+
   render(){
     return (
       <div>
-        {db.products.map((product, index) => {
-          <div key={index} className={styles.box}>
-            <Link to={'/product/' + product.id}>
+          <div className={styles.box}>
+            <Link to={'/product/' + this.props.id}>
               <div className={styles.card}>
-                <img className={styles.image} src={product.image} alt="product" />
+                <img className={styles.image} src={this.props.image} alt="product" />
               </div>
               <div className={styles.text}>
-                <p>{product.name}</p>
+                <p>{this.props.name}</p>
                 <p>
-                  <b>${product.price}.00</b>
+                  <b>${this.props.price}.00</b>
                 </p>
               </div>
             </Link>
@@ -27,7 +25,6 @@ class ProductBox extends React.Component {
               <FontAwesomeIcon className={styles.basket} icon={faShoppingBasket} />
             </div>
           </div>
-        })}
       </div>
     );
   }

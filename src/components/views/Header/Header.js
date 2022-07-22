@@ -13,7 +13,6 @@ const categoriesData = db.categories;
 
 class Header extends React.Component {
 
-
   render(){
     return (
       <header className={styles.header}>

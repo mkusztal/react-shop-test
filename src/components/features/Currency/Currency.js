@@ -1,5 +1,5 @@
 import React from 'react';
-//import styles from './Currency.module.scss';
+import styles from './Currency.module.scss';
 
 class Currency extends React.Component{
 
@@ -16,7 +16,7 @@ class Currency extends React.Component{
 
   render(){
     return (
-      <select value={this.state.value} onChange={this.handleChange}>
+      <select  value={this.state.value} onChange={this.handleChange}>
         <option value="dollar">$ USD</option>
         <option value="euro">€ EUR</option>
         <option value="yen">¥ YPY</option>

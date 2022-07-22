@@ -1,5 +1,14 @@
 @import '../../../styles/settings.scss';
 
+select{
+  border: none;
+  font-size: 18px;
+}
+
+option{
+}
+
+
 .dropdown {
   position: relative;
   display: inline-block;
